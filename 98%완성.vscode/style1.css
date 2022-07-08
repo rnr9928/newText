@@ -1,0 +1,293 @@
+
+body {
+  font-family: 'Jua', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  
+}
+
+
+
+/*NFT 슬라이드 부분*/
+
+.menu-tabs,
+.menu-slide {
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: white;
+  padding: 0 2em;
+  
+}
+
+.menu-slide1{
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  height: 300vh;
+  position: relative;
+  background: rgb(245, 212, 67);
+  padding: 0 2em;
+  
+}
+
+.menu-slide2 {
+  display: flex;
+  flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  padding: 0 2em;
+}
+
+.menu-tabs h1,
+.menu-slide h1 {
+  font-size: 10rem;
+  margin: 0;
+  letter-spacing: 4rem;
+}
+.menu-tabs h3,
+.menu-slide h3 {
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  opacity: 0.6;
+}
+
+.menu-tabs-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px black;
+  background: #d2dae2;
+  z-index: 10;
+}
+.menu-tabs-container--top {
+  position: fixed;
+  top: 0;
+ 
+}
+
+.menu-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: black;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+}
+.menu-tab:hover {
+  color: white;
+  background: rgba(113, 181, 240);
+  transition: all 0.5s ease;
+}
+
+.menu-tab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: rgb(138, 138, 207);
+  transition: left 0.3s ease;
+}
+
+
+
+@media (min-width: 800px) {
+  .menu-tabs h1,
+.menu-slide h1 {
+    font-size: 3rem;
+  }
+  .menu-tabs h3,
+.menu-slide h3 {
+    font-size: 1rem;
+  }
+
+  .menu-tab {
+    font-size: 1rem;
+  }
+}
+
+
+img {
+  max-width: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 2500px;
+  
+}
+
+.el1 {
+  display: inline-block;
+  position: sticky;
+  top: 300px;
+  width: 300px;
+  height: 100px;
+  margin: 60px;
+  margin-top: 0px;
+  background: rgb(245, 212, 67);
+  font-family: 'Jua', sans-serif;
+  font-size: 80px;
+  text-shadow: 2px 2px 2px;
+  
+}
+
+.el2{
+  width: 25%;
+  height: 30%;
+  float: right;
+  margin-left: -20vh;
+  margin-top: 2%;
+  padding: 4%;
+
+}
+
+.el2 p{
+  margin-left: 100px;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px;
+}
+
+.el3{
+  width: 25%;
+  height: 40%;
+  float: right;
+  margin-left: 5%;
+  margin-top: 35%;
+  padding: 4%;
+  border-radius: 4;
+}
+
+.el3 p {
+  margin-left: 130px;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px;
+}
+
+.el4{
+  width: 23%;
+  height: 28%;
+  float: right;
+  margin-right: -58%;
+  margin-top: 68%;
+  padding: 4%;
+}
+
+.el4 p{
+  margin-left: 130px;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px;
+}
+
+.el5{
+  width: 23%;
+  height: 28%;
+  float: right;
+  margin-right: -35%;
+  margin-top: 99%;
+  padding: 4%;
+}
+
+.el5 p{
+  margin-left: 160px;
+  font-size: 30px;
+  text-shadow: 1px 1px 1px;
+}
+
+/*가로스크롤 CSS*/
+.about {
+  background-color: white;
+}
+
+.about__item {
+  display: inline-block;
+  width: 800px;
+  padding: 0px 20px;
+ font-size: 100px;
+ margin-bottom: 64px;
+ font-family: 'Jua', sans-serif;
+ 
+}
+
+.about__item:nth-child(odd) img {
+  margin-bottom: 64px;
+}
+
+.about__item:nth-child(even) {
+  flex-direction: column-reverse;
+}
+
+.about__item img {
+  object-fit: cover;
+  height: 650px;
+  width: 500px;
+}
+
+.scroll__section {
+  position: relative;
+  height: 350vh;
+  margin: 0;
+}
+
+.scroll__wrapper {
+  position: sticky;
+  top: 10rem;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.scroll__content {
+  display: flex;
+  padding: 80px;
+  height: 100vh;
+  width: 350vh;
+  will-change: transform;
+}
+
+
+/*박스돌아가는CSS*/
+  .sa {
+    opacity: 0;
+    transition: all .5s ease;
+  }
+  .sa-rotateL {
+    transform: rotate(180deg);
+    border: solid black;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+  .sa-rotateR {
+    transform: rotate(-180deg);
+    border: solid black;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+  .sa-scaleDown {
+    transform: scale(2);
+    border: solid black;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+  .sa.show {
+    opacity: 1;
+    transform: none;
+  }
